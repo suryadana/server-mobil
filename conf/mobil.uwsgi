@@ -1,0 +1,14 @@
+[uwsgi]
+chdir=your_base_directory/
+mount=your_base_directory=wsgi.py
+module = uwsgi
+master = true
+processes = 2
+socket = mobil.sock
+chmod-socket = 660
+chown-socket = www-data
+wsgi-file = your_base_directory/wsgi.py
+plugins = python
+vacum = true
+daemonize = true
+virutalenv = your_virtualenv
